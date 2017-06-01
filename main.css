@@ -30,7 +30,7 @@ body {
 	border: 1px solid black;
 	margin: 5px 8px;
 	display: inline-block;
-	background-color: grey;
+	background-color: #999999;
 }
 
 .palette h3 {
@@ -47,15 +47,15 @@ body {
 }
 
 #red {
-	background: red;
+	background: #FF4F4F;
 }
 
 #green {
-	background: green;
+	background: #7DF442;
 }
 
 #blue {
-	background: blue;
+	background: #42CBF4;
 }
 
 #yellow {
@@ -63,7 +63,7 @@ body {
 }
 
 #purple {
-	background: purple;
+	background: #C570FF;
 }
 
 #pink {
