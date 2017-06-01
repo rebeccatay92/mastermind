@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="main.css" rel="stylesheet">
+	<title>Mastermind</title>
+</head>
+
+<body>
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Mastermind in Vanilla JavaScript</h1>
+			<h3>Instructions:</h3>
+			<h4>The goal of this game is to correctly guess the secret code made up of colored pegs. There are 6 possible colors, and the secret code can consist of repeated colors. To win, you need to get it right in 8 tries or less. Click on the pegs to select their color. Click the Check button to make a guess. The green number indicates the number of pegs with the correct color and in the correct position. The orange number indicates the number of pegs with the correct color but in the wrong position.</h4>
+		</div>
+	</div>
+	<div class="row board">
+		<div class="col-sm-1 col-sm-offset-1 numTries">
+			<div class="row">
+				<p>1</p>
+			</div>
+			<div class="row">
+				<p>2</p>
+			</div>
+			<div class="row">
+				<p>3</p>
+			</div>
+			<div class="row">
+				<p>4</p>			
+			</div>
+			<div class="row">
+				<p>5</p>
+			</div>
+			<div class="row">
+				<p>6</p>
+			</div>
+			<div class="row">
+				<p>7</p>
+			</div>
+			<div class="row">
+				<p>8</p>
+			</div>	
+		</div>
+		<div class="col-sm-2 pegs">
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>
+			</div>
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>
+			</div>
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>
+			</div>
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>			
+			</div>
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>
+			</div>
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>
+			</div>
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>
+			</div>
+			<div class="row">
+				<div class="circle" id="pos1"></div>
+				<div class="circle" id="pos2"></div>
+				<div class="circle" id="pos3"></div>
+				<div class="circle" id="pos4"></div>
+			</div>												
+		</div>
+		<div class="col-sm-1 result">
+			<div class="row">
+				<p>1</p>
+			</div>
+			<div class="row">
+				<p>2</p>
+			</div>
+			<div class="row">
+				<p>3</p>
+			</div>
+			<div class="row">
+				<p>4</p>			
+			</div>
+			<div class="row">
+				<p>5</p>
+			</div>
+			<div class="row">
+				<p>6</p>
+			</div>
+			<div class="row">
+				<p>7</p>
+			</div>
+			<div class="row">
+				<p>8</p>
+			</div>	
+		</div>
+		<div class="col-sm-2 palette">
+			<h3>Selected Color :</h3>			
+			<div class="paletteCircle" id="red"></div>
+			<div class="paletteCircle" id="green"></div>
+			<div class="paletteCircle" id="blue"></div>
+			<div class="paletteCircle" id="yellow"></div>
+			<div class="paletteCircle" id="purple"></div>
+			<div class="paletteCircle" id="pink"></div>
+			<div class="check">CHECK</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
