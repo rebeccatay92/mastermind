@@ -70,11 +70,26 @@ body {
 	background: pink;
 }
 
+.palette .row {
+	border: none;
+}
+
 .check {
 	font-size: 28px;
 	text-align: center;
-	margin: 25px;
+	padding: 5px 5px;
+	margin: 10px 20px;
 	border: 2px solid black;
-	background: white;
-	width: 120px;
+	border-radius: 15px;
+	background-color: #4CAF50;
+	box-shadow: 0 8px #999;
+	cursor: pointer;
 }
+.check:focus {outline:0;}
+.check:hover {background-color: #3e8e41}
+
+.check:active {
+	border: 2px solid black;
+	background-color: #3e8e41;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);

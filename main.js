@@ -26,7 +26,6 @@ for (i = 0; i < paletteCircle.length; i ++) {
 		paletteCircleReset();
 		this.style.border="4px solid black";
 		currentColor = colorText.indexOf(this.id); //convert colorid into digit
-		console.log(currentColor);
 	})
 }
 
@@ -39,7 +38,16 @@ for (i = 4*numTries; i < (4*numTries + 4); i ++) {
 	})
 }
 
-//create check button which 
-//1) removes event listeners from previous row
-//2) creates new event listeners for current row (change numTries)
-//3) run through scoring algorithm
+//document.getElementsByClassName("check").disabled = true;
+document.getElementsByClassName("check")[0].addEventListener("click", function() {
+	numTries += 1;
+	console.log(numTries);
+});
+//loop for pegs has already run. cant add more event listeners
+//make activating pegs a function. insert into check button.
+
+//create check button which increases numTries by 1
+//1) checks if all 4 circles are filled. if yes then clickable
+//2) removes event listeners from previous row
+//3) creates new event listeners for current row
+//4) run through scoring algorithm
