@@ -55,8 +55,7 @@ document.getElementsByClassName("check")[0].addEventListener("click", function()
 	inactivatePreviousRow();
 });
 
-//create check button which increases numTries by 1 (done)
+
 //1) checks if all 4 circles are filled. if yes then clickable
-//2) removes event listeners from previous row (done)
-//3) creates new event listeners for current row (done)
-//4) run through scoring algorithm
+//2) run through scoring algorithm
+//3)

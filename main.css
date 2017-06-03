@@ -3,15 +3,18 @@ body {
 }
 
 .numTries {
-	background: azure;
+	background: white;
 }
 
 .pegs {
 	background: azure;
 }
+.pegs .row {
+	border: 1px solid black;
+}
 
 .result {
-	background: azure;
+	background: white;
 }
 
 .board {
@@ -20,9 +23,14 @@ body {
 
 .board .row {
 	height: 50px;
-	border: 1px solid black;
 }
 
+.row h2 {
+	text-align: right;
+	padding: 0 20px;
+	line-height: auto;
+	margin: 8px auto;
+}
 .circle {
 	height: 40px;
 	width: 40px;
