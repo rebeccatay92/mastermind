@@ -28,12 +28,29 @@ for (i = 0; i < paletteCircle.length; i ++) {
 		currentColor = colorText.indexOf(this.id); //convert colorid into digit
 	})
 }
-
+currentRow = [0, 0, 0, 0];
 //creates event listeners for current row and assigns currentColor to peg
 numTries = 0;
 circles = document.getElementsByClassName("circle");
 assignColor = function() {
 	this.style.backgroundColor=colorCode[currentColor];
+	switch(this.className) {
+		case "circle pos0":
+		currentRow[0] = currentColor;
+		break;
+
+		case "circle pos1":
+		currentRow[1] = currentColor;
+		break;
+
+		case "circle pos2":
+		currentRow[2] = currentColor;
+		break;
+
+		case "circle pos3":
+		currentRow[3] = currentColor;
+		break;
+	}
 }
 
 activateCurrentRow = function() {
@@ -53,7 +70,9 @@ checkButton.addEventListener("click", function() {
 	numTries ++;
 	activateCurrentRow();
 	inactivatePreviousRow();
+	console.log(currentRow);
 });
 
 //create array with digits corresponding to colors
+//reset array back to zeroes after check
 //compare array with secret code
