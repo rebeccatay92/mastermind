@@ -9,8 +9,8 @@ console.log(secretCode);
 
 //first create the color palette picker
 //use numbers 0 to 5 for colors.
-colorCode = ["#FF4F4F", "#7DF442", "#42CBF4", "yellow", "#C570FF", "pink"];
-colorText = ["red", "green", "blue", "yellow", "purple", "pink"];
+colorCode = ["gray", "#FF4F4F", "#7DF442", "#42CBF4", "yellow", "#C570FF"];
+colorText = ["gray", "red", "green", "blue", "yellow", "purple"];
 //when clicking on another color, this resets the border around previous selections
 paletteCircle = document.getElementsByClassName("paletteCircle");
 paletteCircleReset = function() {
@@ -47,15 +47,13 @@ inactivatePreviousRow = function () {
 		circles[i].removeEventListener("click", assignColor);
 	}	
 }
+checkButton = document.getElementsByClassName("check")[0];
 
-//document.getElementsByClassName("check").disabled = true;
-document.getElementsByClassName("check")[0].addEventListener("click", function() {
-	numTries += 1;
+checkButton.addEventListener("click", function() {
+	numTries ++;
 	activateCurrentRow();
 	inactivatePreviousRow();
 });
 
-
-//1) checks if all 4 circles are filled. if yes then clickable
-//2) run through scoring algorithm
-//3)
+//create array with digits corresponding to colors
+//compare array with secret code

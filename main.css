@@ -38,7 +38,7 @@ body {
 	border: 1px solid black;
 	margin: 5px 8px;
 	display: inline-block;
-	background-color: #999999;
+	background-color: gray;
 }
 
 .palette h3 {
@@ -52,6 +52,10 @@ body {
 	border: 1px solid black;
 	margin: 5px 8px;
 	display: inline-block;
+}
+
+#gray {
+	background: gray;
 }
 
 #red {
@@ -74,10 +78,6 @@ body {
 	background: #C570FF;
 }
 
-#pink {
-	background: pink;
-}
-
 .palette .row {
 	border: none;
 }
@@ -94,6 +94,7 @@ body {
 	cursor: pointer;
 }
 .check:focus {outline:0;}
+
 .check:hover {background-color: #3e8e41}
 
 .check:active {
@@ -101,3 +102,4 @@ body {
 	background-color: #3e8e41;
 	box-shadow: 0 5px #666;
 	transform: translateY(4px);
+}
