@@ -31,6 +31,7 @@ body {
 	line-height: auto;
 	margin: 8px auto;
 }
+
 .circle {
 	height: 40px;
 	width: 40px;
@@ -54,33 +55,28 @@ body {
 	display: inline-block;
 }
 
-#gray {
-	background: gray;
+.result h2 {
+	text-align: left;
+	padding: 0 auto;
+	line-height: auto;
+	margin: 8px auto;
+	display: inline-block;
 }
 
-#red {
-	background: #FF4F4F;
+
+.correctPosition {
+	color: green;
+}
+.correctColor {
+	color: orange;
 }
 
-#green {
-	background: #7DF442;
-}
-
-#blue {
-	background: #42CBF4;
-}
-
-#yellow {
-	background: yellow;
-}
-
-#purple {
-	background: #C570FF;
-}
-
-.palette .row {
-	border: none;
-}
+#gray {background: gray}
+#red {background: #FF4F4F}
+#green {background: #7DF442}
+#blue {background: #42CBF4}
+#yellow {background: yellow}
+#purple {background: #C570FF}
 
 .check {
 	font-size: 28px;
@@ -93,7 +89,7 @@ body {
 	box-shadow: 0 8px #999;
 	cursor: pointer;
 }
-.check:focus {outline:0;}
+.check:focus {outline:0}
 
 .check:hover {background-color: #3e8e41}
 

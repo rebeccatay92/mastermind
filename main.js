@@ -68,11 +68,20 @@ checkButton = document.getElementsByClassName("check")[0];
 
 checkButton.addEventListener("click", function() {
 	numTries ++;
-	activateCurrentRow();
+	if (numTries < 8) {activateCurrentRow()};
 	inactivatePreviousRow();
-	console.log(currentRow);
+	correctPosition();
 });
 
-//create array with digits corresponding to colors
+correctPosition = function() {
+	counter = 0;
+	for (i = 0; i < 4; i ++) {
+		if(secretCode[i] === currentRow[i]) {
+			counter ++;
+		}
+	}
+	document.getElementsByClassName("correctPosition")[numTries-1].innerHTML = counter;
+}
+
 //reset array back to zeroes after check
-//compare array with secret code
+//compare array with secret code. update number of pegs with correct color but wrong slot.
