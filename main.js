@@ -80,6 +80,10 @@ correctPosition = function() {
 			counter ++;
 		}
 	}
+	if (counter === 4) {
+		alert("You Win!");
+		return;
+	}
 	document.getElementsByClassName("correctPosition")[numTries-1].innerHTML = counter;
 }
 
