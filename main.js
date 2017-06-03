@@ -32,22 +32,31 @@ for (i = 0; i < paletteCircle.length; i ++) {
 //creates event listeners for current row and assigns currentColor to peg
 numTries = 0;
 circles = document.getElementsByClassName("circle");
-for (i = 4*numTries; i < (4*numTries + 4); i ++) {
-	circles[i].addEventListener("click", function() {
-		this.style.backgroundColor=colorCode[currentColor];
-	})
+assignColor = function() {
+	this.style.backgroundColor=colorCode[currentColor];
+}
+
+activateCurrentRow = function() {
+	for (i = 4*numTries; i < (4*numTries + 4); i ++) {
+		circles[i].addEventListener("click", assignColor);
+	}
+}
+activateCurrentRow(); //first row active even before check button is clicked
+inactivatePreviousRow = function () {
+	for (i = 4*(numTries-1); i < (4*(numTries-1) + 4); i ++) {
+		circles[i].removeEventListener("click", assignColor);
+	}	
 }
 
 //document.getElementsByClassName("check").disabled = true;
 document.getElementsByClassName("check")[0].addEventListener("click", function() {
 	numTries += 1;
-	console.log(numTries);
+	activateCurrentRow();
+	inactivatePreviousRow();
 });
-//loop for pegs has already run. cant add more event listeners
-//make activating pegs a function. insert into check button.
 
-//create check button which increases numTries by 1
+//create check button which increases numTries by 1 (done)
 //1) checks if all 4 circles are filled. if yes then clickable
-//2) removes event listeners from previous row
-//3) creates new event listeners for current row
+//2) removes event listeners from previous row (done)
+//3) creates new event listeners for current row (done)
 //4) run through scoring algorithm
