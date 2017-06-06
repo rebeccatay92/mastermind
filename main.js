@@ -78,6 +78,7 @@ checkButton.addEventListener("click", function() {
 	}
 });
 
+//checking if peg is of the correct color and in the right slot
 correctPosition = function() {
 	posCounter = 0;
 	for (i = 0; i < 4; i ++) {
@@ -91,6 +92,9 @@ correctPosition = function() {
 	document.getElementsByClassName("correctPosition")[numTries-1].innerHTML = posCounter;
 }
 
+//checking if the right colors are present
+//if 4 different colors are in the secret code, 
+//having 1 color repeated 4 times still counts as 4 of the right colors
 correctColor = function() {
 	colCounter = 0;
 	for (i = 0; i < 4; i ++) {
@@ -100,5 +104,3 @@ correctColor = function() {
 	}
 	document.getElementsByClassName("correctColor")[numTries-1].innerHTML = colCounter;
 }
-//reset array back to zeroes after check
-//compare array with secret code. update number of pegs with correct color but wrong slot.
