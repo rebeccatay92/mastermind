@@ -71,21 +71,34 @@ checkButton.addEventListener("click", function() {
 	if (numTries < 8) {activateCurrentRow()};
 	inactivatePreviousRow();
 	correctPosition();
+	correctColor();
+	currentRow = [0, 0, 0, 0];
+	if (numTries === 8 && posCounter !== 4) {
+		alert("Game Over");
+	}
 });
 
 correctPosition = function() {
-	counter = 0;
+	posCounter = 0;
 	for (i = 0; i < 4; i ++) {
 		if(secretCode[i] === currentRow[i]) {
-			counter ++;
+			posCounter ++;
 		}
 	}
-	if (counter === 4) {
-		alert("You Win!");
-		return;
+	if (posCounter === 4) {
+		alert("You Win! Refresh for a new game.");
 	}
-	document.getElementsByClassName("correctPosition")[numTries-1].innerHTML = counter;
+	document.getElementsByClassName("correctPosition")[numTries-1].innerHTML = posCounter;
 }
 
+correctColor = function() {
+	colCounter = 0;
+	for (i = 0; i < 4; i ++) {
+		if(secretCode.indexOf(currentRow[i]) !== -1) {
+				colCounter ++;
+		}
+	}
+	document.getElementsByClassName("correctColor")[numTries-1].innerHTML = colCounter;
+}
 //reset array back to zeroes after check
 //compare array with secret code. update number of pegs with correct color but wrong slot.

@@ -2,19 +2,9 @@ body {
 	background-color: white;
 }
 
-.numTries {
-	background: white;
-}
-
-.pegs {
-	background: azure;
-}
 .pegs .row {
+	background: azure;
 	border: 1px solid black;
-}
-
-.result {
-	background: white;
 }
 
 .board {
@@ -25,7 +15,7 @@ body {
 	height: 50px;
 }
 
-.row h2 {
+.numTries h2 {
 	text-align: right;
 	padding: 0 20px;
 	line-height: auto;
@@ -57,7 +47,7 @@ body {
 
 .result h2 {
 	text-align: left;
-	padding: 0 auto;
+	padding: 0 8px;
 	line-height: auto;
 	margin: 8px auto;
 	display: inline-block;
